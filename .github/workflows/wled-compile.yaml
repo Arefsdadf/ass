@@ -1,0 +1,7 @@
+[env:custom_build]
+extends = env:nodemcuv2
+build_flags = ${env:nodemcuv2.build_flags} -D WLED_ENABLE_MQTT -D WLED_ENABLE_WEBSOCKETS -D WLED_ENABLE_ADALIGHT -D WLED_ENABLE_PIXART -D WLED_DISABLE_ALEXA -D WLED_DISABLE_HUESYNC -D WLED_MAX_USERMODS=5 -D WLED_AP_SSID='"lala"' -D WLED_AP_PASS='"123123123"' -D USERMOD_DHT -D USERMOD_DHT_CELSIUS -D USERMOD_BH1750 -D USERMOD_AUTO_SAVE -D USERMOD_ANIMATED_STAIRCASE -D USERMOD_MULTI_RELAY
+lib_deps = 
+  ${env:nodemcuv2.lib_deps}
+  https://github.com/alwynallan/DHT_nonblocking
+  claws/BH1750 @ ^1.2.0
